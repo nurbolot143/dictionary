@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <databaseChangeLog
-        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
-    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd ">
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-      <changeSet id="1" author="your.name" labels="example-label" context="example-context">
-          <comment>example-comment</comment>
+    <changeSet id="1" author="your.name" labels="example-label" context="example-context">
+        <comment>example-comment</comment>
         <createTable tableName="person">
             <column name="id" type="int" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
