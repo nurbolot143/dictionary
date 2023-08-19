@@ -12,6 +12,16 @@ public class Word : Entity
     {
     }
 
+    public static Word Create(string russian,
+                              string english)
+    {
+        return new Word
+        {
+            Russian = russian,
+            English = english
+        };
+    }
+
     public virtual void EditRussian(string word)
     {
         Russian = word;

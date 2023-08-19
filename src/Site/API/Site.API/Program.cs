@@ -4,22 +4,20 @@ using Infrastructure.AspNetCore;
 using Infrastructure.AspNetCore.Extensions;
 using Infrastructure.AspNetCore.Nh;
 using Infrastructure.Seedwork.Providers;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.HttpLogging;
-using Microsoft.Extensions.DependencyInjection;
 using Site.API;
 
 WebApplicationBoostrap.Create(args)
                       .ContainerBuilder((_, containerBuilder) => //
                       {
                           containerBuilder.RegisterAssemblyModules(Assembly.Load("Site.API"));
+                          containerBuilder.RegisterAssemblyModules(Assembly.Load("Site.Application"));
 
                           containerBuilder.RegisterInstance(NhSessionFactory.Instance);
                       })
                       .Build(builder =>
                       {
-                          var services      = builder.Services;
-                          var configuration = builder.Configuration;
+                          var services = builder.Services;
 
                           services.AddHttpLogging(logging =>
                           {
@@ -45,7 +43,6 @@ WebApplicationBoostrap.Create(args)
                           app.UseHttpLogging();
 
                           app.UseForwardedHeaders();
-
 
                           app.MapControllers();
                       })

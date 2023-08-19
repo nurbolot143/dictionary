@@ -10,8 +10,7 @@ public static class NhSessionFactory
     static NhSessionFactory()
     {
         Instance = new SessionFactoryBuilder()
-                   .AddFluentMappingsFrom("PaymentSystem.Application")
-                   .AddFluentMappingsFrom("FrontOffice.CashStations.Application")
+                   .AddFluentMappingsFrom("DictionarySystem.Application")
                    .Build();
     }
 }

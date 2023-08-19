@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\DictionarySystem\DictionarySystem.Application\DictionarySystem.Application.csproj"/>
+  </ItemGroup>
+</Project>

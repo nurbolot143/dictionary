@@ -10,6 +10,8 @@ public class CompositionRoot : Module
 {
     protected override void Load(ContainerBuilder builder)
     {
-        builder.RegisterAssemblyModules(Assembly.Load("Infrastructure.Seedwork"));
+        builder.RegisterAssemblyModules(Assembly.Load("DictionarySystem.Core"));
+
+        builder.RegisterAssemblyModules(Assembly.Load("Infrastructure.Application"));
     }
 }
