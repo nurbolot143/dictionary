@@ -1,0 +1,21 @@
+﻿version: "3"
+
+name: dictionary
+services:
+  database:
+    image: postgres:14
+    container_name: dictionary-db
+    networks:
+      - dictionary-net
+    volumes:
+      - "database-data:/var/lib/postgresql/data"
+      - ./migrations/create-database:/docker-entrypoint-initdb.d
+    ports:
+      - 25432:5432
+    environment:
+      POSTGRES_PASSWORD: 123
+networks:
+  dictionary-net:
+    driver: bridge
+volumes:
+  database-data:
