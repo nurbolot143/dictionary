@@ -1,12 +1,12 @@
 databaseChangeLog:
-- changeSet:
-      id:  1
-      author:  your.name
+  - changeSet:
+      id: 1
+      author: your.name
       changes:
-        # Insert Yaml change objects here https://docs.liquibase.com/concepts/changelogs/yaml-format.html
+      # Insert Yaml change objects here https://docs.liquibase.com/concepts/changelogs/yaml-format.html
 
-- changeSet:
-      id:  2
-      author:  your.name
+  - changeSet:
+      id: 2
+      author: your.name
       changes:
-        # Insert Yaml change objects here https://docs.liquibase.com/concepts/changelogs/yaml-format.html
+      # Insert Yaml change objects here https://docs.liquibase.com/concepts/changelogs/yaml-format.html
