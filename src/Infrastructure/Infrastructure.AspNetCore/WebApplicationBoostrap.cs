@@ -130,11 +130,8 @@ public class WebApplicationBoostrap
             _builder.Services.AddLogging(configure => { configure.AddSerilog(); });
 
             //Нужно для AppMetrics
-            _builder.Services.Configure<KestrelServerOptions>(options =>
-            {
-                options.AllowSynchronousIO = true;
-            });
-            
+            _builder.Services.Configure<KestrelServerOptions>(options => { options.AllowSynchronousIO = true; });
+
             if (_configureCors is not null)
             {
                 _builder.Services.AddCors(c => //
@@ -207,7 +204,7 @@ public class WebApplicationBoostrap
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            
+
             app.MapHealthChecks("/healthz")
                .AllowAnonymous();
 

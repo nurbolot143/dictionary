@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <ProjectReference Include="..\Infrastructure.Seedwork\Infrastructure.Seedwork.csproj"/>
+    <ProjectReference Include="..\Infrastructure.Seedwork\Infrastructure.Seedwork.csproj" />
   </ItemGroup>
 
   <ItemGroup>
